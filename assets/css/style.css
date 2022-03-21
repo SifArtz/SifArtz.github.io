@@ -1,0 +1,359 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: white;
+    background: #090B0F;
+}
+*,
+*:before,
+*:after 
+{
+    box-sizing: border-box;
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+}
+/*Container */
+.container {
+    width: 100%;
+    max-width: 1300px;
+    max-height: inherit;
+    margin: 0 auto;
+}
+
+/*Intro*/
+.intro {
+    display: flex;
+    margin-top: 200px;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro_inner{
+   width: 100%;
+  line-height: 0.2em;
+    margin: 0 auto;
+    text-align: center
+        
+        
+}
+
+
+.intro_join {
+  font-size: 60px;  
+    line-height: 1.1;
+  text-align:center;
+  background: linear-gradient(to right, #176CF1 20%, #C47EFF 30%, #176CF1 70%, #B55EFF  80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 7s ease-in-out infinite alternate;
+}
+
+.intro_join4 {
+    white-space: nowrap;
+  font-size: 20px;  
+    line-height: 1px;
+  text-align:left;
+  background: linear-gradient(to right, #176CF1 20%, #C47EFF 30%, #176CF1 70%, #B55EFF  80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 7s ease-in-out infinite alternate;
+}
+
+.intro_inner2{
+   width: 20%;
+
+    margin: 30 auto;
+    text-align: left;
+        
+        
+}
+
+
+@keyframes textShine {
+  to {
+    background-position: 200%;
+  }
+}
+
+.intro_join1{
+    font-size: 60px;  
+  text-align: center;
+}
+.intro_join2{
+
+     text-align: center;
+    font-size: 15px;  
+  line-height: 1;
+    max-width: 450px;
+    margin: auto
+  
+}
+
+.intro_join4{
+
+     text-align: left;
+    font-size: 30px;  
+  line-height: 1;
+    max-width: 450px;
+    margin: auto
+   
+
+
+    
+}
+.image_one{
+   margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border: 1px solid #00a8e1;
+    border-radius: 1.6%
+    
+}
+
+/*Header*/
+.header    {
+    padding-top: 30px;
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+/*nav*/
+.nav
+{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.nav__link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    
+    background-color: #AFD9FC;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover{
+    color: #AFD9FC
+    
+}
+
+.nav__link:hover:after{
+    opacity: 1;
+    
+    
+}
+
+.wrapper {
+	position: relative;
+	min-height: 100%;
+    margin: auto;
+}
+.content {
+	padding-bottom: 100px;
+    margin: auto;
+    text-align:left;
+}
+.footer {
+    margin: auto;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 150px;
+}
+.footer_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footertext{
+    
+    text-align: center;
+    margin-top: 50px; 
+    padding: 20px 190px 20px 190px;
+    
+   
+     display: inline-block;
+    vertical-align: top;
+
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: color .1s linear;
+    
+}
+
+
+
+.footertext:hover{
+    color: #AFD9FC
+    
+}
+
+.footertext:hover:after{
+    opacity: 1;
+    
+    
+}
+.footertext3{
+    text-align: center;
+    margin-top: 50px; 
+    padding: 20px 190px 0px 125px;
+}
+
+.rectangle{
+
+width: 28%;
+
+height: 150px;
+display: inline-block;
+
+margin:  auto;
+    margin-right: 10px;
+    margin-top:19px;
+
+
+background: #13161B;
+border-radius: 6px;
+;}
+
+.text_center_middle{
+font-size: 10px;
+color: #ffffff;
+
+text-align: center;
+line-height: 50px;
+
+}
+.desc_center_middle{
+font-size: 10px;
+color: #C0C0C0;
+font-family: 'Inter', serif;
+text-align: center;
+  line-height: 2;
+    max-width: 450px;
+    margin: auto
+
+}
+
+/*Отркывающийся боркс*/
+
+.half {
+  float: left;
+  width: 50%;
+  padding: 0 1em;
+}
+/* Acordeon styles */
+.tab {
+  position: relative;
+  margin-bottom: 1px;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+}
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab label {
+  position: relative;
+  display: block;
+  padding: 0 0 0 1em;
+  background: #13161B;
+  font-weight: bold;
+  line-height: 3;
+  cursor: pointer;
+}
+.blue label {
+  background: #13161B;
+}
+.tab-content {
+  max-height: 0;
+  overflow: hidden;
+  background: #8B39CB;
+  -webkit-transition: max-height .35s;
+  -o-transition: max-height .35s;
+  transition: max-height .35s;
+}
+.blue .tab-content {
+  background: #13161B;
+}
+.tab-content p {
+  margin: 1em;
+}
+/* :checked */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+/* Icon */
+.tab label::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 3em;
+  height: 3em;
+  line-height: 3;
+  text-align: center;
+  -webkit-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+.tab input[type=checkbox] + label::after {
+  content: "+";
+}
+.tab input[type=radio] + label::after {
+  content: "\25BC";
+}
+.tab input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+.tab input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
+}
