@@ -1,120 +1,139 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/assets/css/form.css">
-    <title>WRM Distribution</title>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/reg/reset.css" />
+    <link rel="stylesheet" href="/assets/reg/style.css" />
 
-<header class = "header">
-    <div class="container">
-        <div class="header__inner">
-            <div class="header__logo">WRM</div>
-            
-                <nav class ="nav">
-                    <a class = "nav__link" href="privilegas.html">privilegs</a>
-                    <a class = "nav__link" href="account.html">account</a>
-                    <a class = "nav__link" href="faq.html">FAQ</a>
-                </nav>
-        </div>
-    </div>
-</header>
-
-
-
-
- <main class="registration__wrapper">
-        <div class="registration__block">
-            <div class="registration__header">Регистрация</div>
-            <div class="errorsInfo"></div>
-            <form action="#" class="registration__form" method="POST">
-
-                <input type="text" name="firstName" id="InputFirstName" class="form__field" placeholder="Имя" required>
-                <div id="errowMessageFirstName"></div>
-
-                <input type="text" name="surName" id="InputSurName" class="form__field" placeholder="Фамилия" required>
-                <div id="errowMessageSurName"></div>
-
-                <input type="text" name="login" id="InputLogin" class="form__field" placeholder="Логин" required>
-                <div id="errowMessagelogin"></div>
-
-                <input type="password" name="password" id="InputPassword" class="form__field"
-                    placeholder="Придумайте пароль" required>
-                <div id="errowMessagePassword"></div>
-
-                <input type="password" name="passwordRepeat" id="InputPasswordRepeat" class="form__field"
-                    placeholder="Повторите пароль" required>
-                <div id="errowMessagePasswordRepeat"></div>
-
-                <input type="tel" name="tel" id="InputTel" class="form__field" placeholder="Номер мобильного телефона"
-                    required>
-                <div id="errowMessageTel"></div>
-                
-                <input type="email" name="email" id="InputEmail" class="form__field" placeholder="Адрес электронной почты"
-                    required>
-                <div id="errowMessageEmail"></div>
-                
-                
-                  <div class="radio">
-      <span>Пол</span>
-      <label>
-        <input type="radio" name="sex" value="мужской" placeholder="Пол" required >мужской
-        <div class="radio-control male" ></div>
-      </label>
-      <label>
-        <input type="radio" name="sex"  value="женский" placeholder="Пол">женский
-        <div class="radio-control female"></div>
-      </label>
-    </div>
-                
-                
-                
-                <div class="bd">
-                <label for="start">Дата рождения: </label>
-                
-            <input type="date" id="start" name="trip-start" placeholder="Дата рождения" required>
-                </div>
-                
-                
-
-                <button type="button" class="registration__button">Зарегистрироваться</button>
-
-                <div class="sign">
-                    <p class="sign__text"> Нажимая кнопку «Зарегистрироваться»:</p>
-                    <div class="sign__userAgreement">
-                        <input type="checkbox" id="userAgreement" value="check" checked="checked">
-                        <div>
-                            Я принимаю условия
-                            <a href="#">Пользовательского соглашения</a>
-                            и даю своё согласие WMRLabel на обработку моей персональной
-                            информации
-                            на
-                            условиях, определенных
-                            <a href="#">Политикой конфиденциальности.</a>
-                        </div>
-                    </div>
-
-                    <div class="sign__ads">
-                        <input type="checkbox" name="userAds" value="check" checked="checked">Я не хочу получать
-                        рекламу и другие предложения данного сервиса WMRLabel
-                    </div>
-                </div>
-            </form>
-        </div>
-    </main>
-
-
+    <title>Registration</title>
+  </head>
   
 
-
-
-    <script src="/assets/css/form.js"></script>
-</body>
-
-
+ 
+  <body>
+    <div class="container">
+      <div class="content">
+        
+        <div class="right-side">
+          <div class="topic-text">Регистрация</div>
+          <p>
+            Чтобы продолжить работу с сайтом, пожалуйста, зарегистрируйтесь!
+          </p>
+          <form action="#" name="form">
+           
+           <!--ИМЯ-->
+            <div class="input-box">
+              <input
+                type="text"
+                placeholder="Имя"
+                name="name"
+                id="name"
+                data-reg="^[А-Я]{1}[а-яё]{2,23}$"
+                required
+              />
+              <label for="name">Только русские буквы</label>
+            </div>
+            
+            <!--ФАМИЛИЯ-->
+            <div class="input-box">
+              <input
+                type="text"
+                placeholder="Фамилия"
+                name="surname"
+                id="surname"
+                data-reg="^[А-Я]{1}[а-яё]{2,23}$"
+                required
+              />
+              <label for="surname">Только русские буквы</label>
+            </div>
+            
+            <!--ЛОГИН-->
+            <div class="input-box">
+              <input
+                type="text"
+                placeholder="Логин"
+                name="login"
+                id="login"
+                data-reg="^[a-zA-z]{1}[a-zA-Z1-9]{3,20}$"
+                required
+              />
+              <label for="login">Только латинские буквы, от 4 до 20 символов, начинаться с буквы</label>
+            </div>
+            
+            <!--ПАРОЛЬ-->
+            <div class="input-box">
+              <input
+                type="password"
+                placeholder="Пароль"
+                name="password"
+                id="password"
+                data-reg="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}"
+                required
+              />
+              <label for="login">Пароль должен состоять из хотя бы одной строчной, прописной, цифры, спецсимвола, длина 6 </label>
+            </div>
+            
+            <!--EMAIL-->
+            <div class="input-box">
+              <input
+                type="text"
+                placeholder="Введите email"
+                name="email"
+                id="email"
+                data-reg="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+                required
+              />
+              <label for="email">В формате: name@mail.com</label>
+            </div>
+            
+            <!--ТЕЛЕФОН-->
+            <div class="input-box">
+              <input
+               
+                type="text"
+                placeholder="Введите телефон"
+                name="phone"
+                id="phone"
+                data-reg="^((\+7|7|8)+([0-9]){10})$"
+                required
+              />
+              <label for="phone">В формате: +78000000000, 88000000000 или 78000000000</label>
+            </div>
+            
+            <!--ПОЛ-->
+             <div class="input-box2" >
+             <p><label for="sex">Пол</label>
+    <select name="sex" id="sex" required data-reg="">
+        <option value="">Указать</option>
+        <option value="male">Мужской</option>
+        <option value="female">Женский</option>
+    </select>
+    </p>
+      </div>  
+                <!--Дата рождения-->
+                <div class = "input-box3" >
+    <label for="bday">Дата рождения</label>
+    <input type="date" id="bday" name="bday" required data-reg="">
+  </div>     
+            
+<!--
+            <div class="input-box message-box">
+              <textarea placeholder="Сообщение"></textarea>
+            </div>
+-->
+            <div class="button">
+              <input type="submit" id="button" value="Зарегистрироваться" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/fce9a50d02.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/reg/app.js"></script>
+  </body>
 </html>
