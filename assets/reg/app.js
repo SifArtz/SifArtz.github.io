@@ -43,7 +43,7 @@ function buttonHandler(e) {
 
   if (Boolean(Number(isAllValid))) {
       alert("Вы успешно зарегистрировались!");
-       window.location.href = "/main.html";
+       window.location.href = "/index.html";
     e.preventDefault();
   }
 }
