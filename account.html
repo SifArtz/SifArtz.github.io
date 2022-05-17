@@ -56,10 +56,10 @@
                 placeholder="Логин"
                 name="login"
                 id="login"
-                data-reg="^[a-zA-z]{1}[a-zA-Z1-9]{3,20}$"
+                data-reg="^[a-zA-z]{1}[a-zA-Z1-9]{4,7}$"
                 required
               />
-              <label for="login">Только латинские буквы, от 4 до 20 символов, начинаться с буквы</label>
+              <label for="login">Только латинские буквы, от 5 до 8 символов, начинаться с буквы</label>
             </div>
             
             <!--ПАРОЛЬ-->
@@ -69,10 +69,10 @@
                 placeholder="Пароль"
                 name="password"
                 id="password"
-                data-reg="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}"
+                data-reg="(?=.*[0-9])(?=.*[!@#$%^&()_*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&()_*]{8,}"
                 required
               />
-              <label for="login">Пароль должен состоять из хотя бы одной строчной, прописной, цифры, спецсимвола, длина 6 </label>
+              <label for="login">Не менее 8 символов (обязательно верхний, нижний регистр, знак спецсимвола и цифры) </label>
             </div>
             
             <!--EMAIL-->
@@ -97,7 +97,7 @@
                 name="phone"
                 id="phone"
                 data-reg="^((\+7|7|8)+([0-9]){10})$"
-                required
+                c
               />
               <label for="phone">В формате: +78000000000, 88000000000 или 78000000000</label>
             </div>
@@ -105,7 +105,7 @@
             <!--ПОЛ-->
              <div class="input-box2" >
              <p><label for="sex">Пол</label>
-    <select name="sex" id="sex" required data-reg="">
+    <select name="sex" id="sex"  data-reg="" required>
         <option value="">Указать</option>
         <option value="male">Мужской</option>
         <option value="female">Женский</option>
@@ -113,9 +113,9 @@
     </p>
       </div>  
                 <!--Дата рождения-->
-                <div class = "input-box3" >
+                <div class = "input-box" >
     <label for="bday">Дата рождения</label>
-    <input type="date" id="bday" name="bday" required data-reg="">
+    <input type="date" min="1950-04-20" max="2021-12-31" id="bday" name="bday"  data-reg="" required>
   </div>     
             
 <!--
