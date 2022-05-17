@@ -11,7 +11,7 @@ formArr.forEach((el) => {
 });
 
 form.addEventListener("input", inputHandler);
-button.addEventListener("click", buttonHandler);
+
 
 function inputHandler({ target }) {
   if (target.hasAttribute("data-reg")) {
@@ -33,6 +33,7 @@ function inputCheck(el) {
 }
 
 function buttonHandler(e) {
+e.preventDefault(); 
   const allValid = [];
   validFormArr.forEach((el) => {
     allValid.push(el.getAttribute("is-valid"));
@@ -41,10 +42,14 @@ function buttonHandler(e) {
     return acc && current;
   });
 
-  if (Boolean(Number(isAllValid))) {
-      alert("Вы успешно зарегистрировались!");
-       window.location.href = "/index.html";
-    e.preventDefault();
+	
+  if (!Boolean(Number(isAllValid))) {
+	  	e.preventDefault;
+
   }
+
+	
+  
 }
+
 
